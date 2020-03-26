@@ -42,6 +42,27 @@ class Testing(models.Model):
 class Test(models.Model):
     "Generated Model"
     test = models.BigIntegerField()
+    testhg = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_testhg",
+    )
+    sdsd = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_sdsd",
+    )
+    saed = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_saed",
+    )
 
 
 class Testtt(models.Model):
